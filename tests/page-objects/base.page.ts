@@ -1,13 +1,13 @@
-import type { Page } from '@playwright/test';
+import type { Page } from "@playwright/test";
 
 export default class BasePage {
-  public readonly page: Page
+  public readonly page: Page;
 
   constructor(page: Page) {
-    this.page = page
+    this.page = page;
   }
 
   public async visit(pathname: string) {
-    await this.page.goto(pathname)
+    await this.page.goto(pathname);
   }
 }
