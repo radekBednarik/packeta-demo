@@ -6,6 +6,7 @@ export default defineConfig({
   retries: 0,
   workers: process.env.CI ? 1 : undefined,
   reporter: [['html'], ["list"]],
+  use: { baseURL: 'https://widget.packeta.com/v6', permissions: ['geolocation'] },
 
   projects: [
     {

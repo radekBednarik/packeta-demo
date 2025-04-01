@@ -12,6 +12,7 @@
   "packageManager": "pnpm@10.7.0",
   "devDependencies": {
     "@playwright/test": "^1.51.1",
-    "@types/node": "^22.13.16"
+    "@types/node": "^22.13.16",
+    "prettier": "^3.5.3"
   }
 }
