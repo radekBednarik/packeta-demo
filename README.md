@@ -27,7 +27,7 @@ pnpm test --repeat-each 5
 - this report also includes trace logs and video. These are normally stored only on failing tests
   but for demo purposes these are always on. Detail config is in `playwright.config.ts`
 
-- comments on results are in the folder `./results`
+- comments on results are in the [results](./results/results.md) folder.
 
 ```bash
 pnpm exec playwright show-report
