@@ -5,7 +5,7 @@ import BranchDetailComponent from "../page-components/branch-detail.component";
 
 test.use({
   geolocation: { longitude: 15.132087639379195, latitude: 50.14229720673398 },
-}); // Prague
+});
 
 test.describe("location detection in app", () => {
   const branchName = /z-box poděbrady, kunštátská 1239/i;
