@@ -41,7 +41,6 @@ describe("in Prague 9", () => {
       .waitFor({ state: "attached" });
 
     const wheelchairRow = branchDetail.tabOtherPointInfoRows.nth(2);
-    await wheelchairRow.scrollIntoViewIfNeeded();
 
     await expect(wheelchairRow).toHaveText(/wheelchair access/i);
   });
