@@ -40,8 +40,12 @@ describe("in Prague 9", () => {
       .last()
       .waitFor({ state: "attached" });
 
+    // this is brittle, but since there are no test ids or roles
+    // I cannot do better
     const wheelchairRow = branchDetail.tabOtherPointInfoRows.nth(2);
 
+    // not possible to verify the state, since it is marked only by svg icon
+    // with no attribute, or something I can use
     await expect(wheelchairRow).toHaveText(/wheelchair access/i);
   });
 });
