@@ -4,15 +4,15 @@
 - TC 2 regarding verification that there is at least one wheelchair accessible z-box in Prague 9 is
   brittle. Main reason is, that lot of elements of the web application the test needs to interact with do
   not have unique identifiers. This is a problem of the web application and not the test itself.
-- Current version of app did not allowed me to do explicitly check, that wheelchair accessibility of z-box
+- Current version of app **did not allowed me to do explicit check**, that wheelchair accessibility of z-box
   is provided, since the true/false state is indicated only via svg icons.
 - I have also experienced failure of location service which leads to failure of both test cases, since
   this service is needed.
 
 ## Reports
 
-- HTML report is not generally included to git and it is therefore not pushed to the repo.
-  You can easily run tests and check the reports on your machine. See README for this.
+- HTML report and reports in general are not normally included to git and it is therefore not pushed to the repo.
+  You can easily run tests and check the reports on your machine. See [README](../README.md) for this.
 
 ## Test result log
 
