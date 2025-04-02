@@ -15,13 +15,16 @@ describe("in Prague 9", () => {
     const filter = new FilterComponent(page);
     const branchList = new BranchListComponent(page);
 
+    await branchList.setTopListItem();
+    // we have to wait until list is ready
+    await branchList.topListItem!.self.waitFor({ state: "visible" });
+
     await search.input.fillInput("Prague 9");
     await search.filter.click();
     await filter.otherServices.click();
     await filter.otherServices.checkWheelchair();
     await filter.submit();
 
-    await branchList.setTopListItem();
     const branchName = await branchList.topListItem!.getBranchName();
     await branchList.topListItem!.click();
 
@@ -31,5 +34,15 @@ describe("in Prague 9", () => {
     );
     await expect(branchDetail.self).toBeAttached();
     await expect(branchDetail.branchName).toBeVisible();
+
+    await branchDetail.clickTabOther();
+    await branchDetail.tabOtherPointInfoRows
+      .last()
+      .waitFor({ state: "attached" });
+
+    const wheelchairRow = branchDetail.tabOtherPointInfoRows.nth(2);
+    await wheelchairRow.scrollIntoViewIfNeeded();
+
+    await expect(wheelchairRow).toHaveText(/wheelchair access/i);
   });
 });

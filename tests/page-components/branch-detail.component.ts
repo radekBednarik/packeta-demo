@@ -9,6 +9,7 @@ export default class BranchDetailComponent {
   public readonly btnChoose: Locator;
 
   public readonly tabOther: Locator;
+  public readonly tabOtherPointInfoRows: Locator;
 
   constructor(page: Page, branchName: string | RegExp) {
     this.page = page;
@@ -20,5 +21,10 @@ export default class BranchDetailComponent {
       name: /choose this box/i,
     });
     this.tabOther = this.self.getByText(/other/i);
+    this.tabOtherPointInfoRows = this.self.locator("[class = 'point-info']");
+  }
+
+  public async clickTabOther() {
+    await this.tabOther.click();
   }
 }
