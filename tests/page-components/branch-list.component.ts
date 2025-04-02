@@ -10,7 +10,7 @@ export default class BranchListComponent {
 
   constructor(page: Page) {
     this.page = page;
-    this.self = this.page.locator("branch-list");
+    this.self = this.page.locator("[class = 'branch-list']");
     this.branchListItems = this.self.getByTestId("branch_results_list");
     this.topListItem = undefined;
   }
