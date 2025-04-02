@@ -9,8 +9,8 @@ export default defineConfig({
   use: {
     baseURL: "https://widget.packeta.com",
     permissions: ["geolocation"],
-    video: "retain-on-failure",
-    trace: "retain-on-failure",
+    video: "on",
+    trace: "on",
     screenshot: "only-on-failure",
     testIdAttribute: "data-testid",
   },

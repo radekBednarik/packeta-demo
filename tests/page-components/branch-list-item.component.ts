@@ -11,4 +11,12 @@ export default class BranchListItemComponent {
     this.self = locator;
     this.branchNameText = this.self.locator("[class ^= 'small-text']");
   }
+
+  public async click() {
+    await this.self.click();
+  }
+
+  public async getBranchName() {
+    return await this.branchNameText.innerText();
+  }
 }
