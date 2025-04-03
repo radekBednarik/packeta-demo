@@ -1,5 +1,5 @@
-import BasePage from "../base.page";
 import type { Page } from "@playwright/test";
+import BasePage from "../base.page";
 
 export default class HomePage extends BasePage {
   public readonly url: string;

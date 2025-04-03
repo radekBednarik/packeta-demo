@@ -1,6 +1,6 @@
 import { type Page, Locator } from "@playwright/test";
-import InputSearchComponent from "./input.search.component";
 import InputFilterComponent from "./input.filter.component";
+import InputSearchComponent from "./input.search.component";
 
 export default class SearchComponent {
   public readonly page: Page;
